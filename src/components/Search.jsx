@@ -1,6 +1,6 @@
 import '../css/Search.css';
 
-function Search({search, setSearch}) {
+function Search({search, setSearch, handleSearch}) {
     return (
         <div className="search-engine">
             <input 
@@ -11,6 +11,9 @@ function Search({search, setSearch}) {
                 value={search} 
                 onChange={(event) => setSearch(event.target.value)}
             />
+            <button className="search-btn" onClick={handleSearch}>
+                Search Weather
+            </button>
         </div>
     )
 }
