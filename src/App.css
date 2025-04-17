@@ -13,5 +13,24 @@ body {
 }
 
 .search-engine input {
+  width: 70%;
+  height: 45px;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 2px 15px;
+  font-size: 16px;
+  outline: none;
+  background-color: #ffffff;
+  color: #555555;
+}
 
+.search-engine button {
+  border: none;
+  border-radius: 8px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 20px;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 15px;
 }
