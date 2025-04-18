@@ -29,6 +29,15 @@ function Weather() {
         fetchWeatherData(search);
     }
 
+    function getCurrentDate() {
+        return new Date().toLocaleDateString('en-us', {
+            weekday : 'long',
+            month : 'long',
+            day : 'numeric',
+            year : 'numeric'
+        })
+    }
+
     useEffect(() => {
         fetchWeatherData('bangalore');
     },[]);
@@ -48,6 +57,9 @@ function Weather() {
                         <h2>
                             {weatherData?.name}, <span>{weatherData?.sys?.country}</span>
                         </h2>
+                    </div>
+                    <div className="date">
+                        <span>{getCurrentDate()}</span>
                     </div>
                 </div>
             )}
