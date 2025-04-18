@@ -40,7 +40,17 @@ function Weather() {
                 setSearch={setSearch}
                 handleSearch={handleSearch}
             />
-            Weather
+            {loading ? (
+                <div>Loading...</div>
+            ) : (
+                <div>
+                    <div className="city-name">
+                        <h2>
+                            {weatherData?.name}, <span>{weatherData?.sys?.country}</span>
+                        </h2>
+                    </div>
+                </div>
+            )}
         </div>
     )
 }
