@@ -50,7 +50,7 @@ function Weather() {
                 handleSearch={handleSearch}
             />
             {loading ? (
-                <div>Loading...</div>
+                <div className="loading">Loading...</div>
             ) : (
                 <div>
                     <div className="city-name">
@@ -61,18 +61,18 @@ function Weather() {
                     <div className="date">
                         <span>{getCurrentDate()}</span>
                     </div>
-                    <div>{weatherData?.main?.temp}</div>
+                    <div className="temp">{weatherData?.main?.temp}</div>
                     <p className="description">
                         {weatherData && weatherData.weather && weatherData.weather[0] ? weatherData.weather[0].description : ''}
                     </p>
                     <div className="weather-info">
-                        <div>
+                        <div className="column">
                             <div>
                                 <p className="wind">{weatherData?.wind?.speed}</p>
                                 <p>Wind Speed</p>
                             </div>
                         </div>
-                        <div>
+                        <div className="column">
                             <div>
                                 <p className="humidity">{weatherData?.main?.humidity}</p>
                                 <p>Humidity</p>
