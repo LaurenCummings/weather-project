@@ -1,5 +1,5 @@
 import '../css/Weather.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Search from '../components/Search';
 
 function Weather() {
@@ -28,6 +28,10 @@ function Weather() {
     function handleSearch() {
         fetchWeatherData(search);
     }
+
+    useEffect(() => {
+        fetchWeatherData('bangalore');
+    },[]);
 
     return (
         <div>
