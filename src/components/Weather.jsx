@@ -9,7 +9,7 @@ function Weather() {
 
     async function fetchWeatherData(param) {
         try {
-            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${param}&appid=e34b4c51d8c2b7bf48d5217fe52ff79e`);
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${param}&appid=b52da9ffc8aa39c3ecd767f91efb29e5`);
 
             const data = await response.json();
 
