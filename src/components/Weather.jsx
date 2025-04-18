@@ -7,15 +7,20 @@ function Weather() {
     const [loading, setLoading] = useState(false);
     const [weatherData, setWeatherData] = useState(null);
 
-    async function fetchWeatherData(param) {
+    async function fetchWeatherData(query) {
+        setLoading(true);
         try {
-            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${param}&appid=b52da9ffc8aa39c3ecd767f91efb29e5`);
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=b52da9ffc8aa39c3ecd767f91efb29e5`);
 
             const data = await response.json();
 
-            console.log(data, 'data');
+            if (data) {
+                setWeatherData(data);
+                setLoading(false);
+            }            
 
         } catch(e) {
+            setLoading(false);
             console.log(e);
         }
     }
