@@ -65,6 +65,20 @@ function Weather() {
                     <p className="description">
                         {weatherData && weatherData.weather && weatherData.weather[0] ? weatherData.weather[0].description : ''}
                     </p>
+                    <div className="weather-info">
+                        <div>
+                            <div>
+                                <p className="wind">{weatherData?.wind?.speed}</p>
+                                <p>Wind Speed</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <p className="humidity">{weatherData?.main?.humidity}</p>
+                                <p>Humidity</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             )}
         </div>
